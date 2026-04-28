@@ -1,4 +1,4 @@
-body {
+body{
   font-family: Arial, sans-serif;
   background-color: #f4f6f8;
   margin: 0;
@@ -33,7 +33,7 @@ input {
 
 button {
   padding: 10px 15px;
-  margin: 5px;
+  
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -51,4 +51,78 @@ button.delete {
 
 button.delete:hover {
   background-color: #c0392b;
+}
+/* DARK MODE */
+.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark .card {
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark input {
+  background: #2c2c2c;
+  color: white;
+  border: 1px solid #555;
+}
+
+.dark button {
+  background-color: #4CAF50;
+}
+
+.dark h2, 
+.dark h3, 
+.dark p, 
+.dark small {
+  color: #ffffff;
+}
+body.dark {
+  background-color: #121212;
+  color: white;
+}
+/* Auth Box */
+.auth-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Dark mode support */
+.dark .auth-container {
+  background: #1e1e1e;
+}
+
+/* Inputs */
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Button */
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  box-sizing: border-box;
+}
+* {
+  box-sizing: border-box;
+}
+.top-bar {
+  display: flex;
+  justify-content: flex-end;   /* 👉 move to right */
+  padding: 15px 20px;
 }

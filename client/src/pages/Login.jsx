@@ -18,7 +18,8 @@ export default function Login() {
   };
 
   return (
-    <div>
+    <div className="auth-wrapper">
+    <div className="auth-container">
       <h2>Login</h2>
 
       <input
@@ -33,6 +34,7 @@ export default function Login() {
       />
 
       <button onClick={handleLogin}>Login</button>
+    </div>
     </div>
   );
 }
