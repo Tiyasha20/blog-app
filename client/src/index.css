@@ -120,11 +120,7 @@ body.dark {
 * {
   box-sizing: border-box;
 }
-.top-bar {
-  display: flex;
-  justify-content: flex-end;   /* 👉 move to right */
-  padding: 15px 20px;
-}
+
 .btn-group {
   display: flex;
   gap: 10px;      /* 🔥 spacing between buttons */
@@ -133,19 +129,34 @@ body.dark {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 30px;
   background: white;
   color: black;
   border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .dark .navbar {
-  background: #1e1e1e;
+   background: #1e1e1e;
   color: white;
+  border-bottom: 1px solid #333;
 }
 .nav-buttons {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
+}
+.nav-buttons button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  transition: 0.2s ease;
 }
 .auth-wrapper {
   display: flex;

@@ -1,11 +1,11 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate, useLocation, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard"; 
 import Register from "./pages/Register";
-import { useNavigate, useLocation } from "react-router-dom";
+
 import { useState, useEffect } from "react";
-import { Navigate } from "react-router-dom";
+
 
 function App() {
   const navigate = useNavigate();
@@ -32,15 +32,16 @@ function App() {
        <div className={darkMode ? "dark" : ""}>
 
       {/* Toggle Button */}
-        <div className="top-bar">
-    <button onClick={() => setDarkMode(!darkMode)}>
-      {darkMode ? "Light Mode ☀️" : "Dark Mode 🌙"}
-    </button>
-  </div>
+      
   <div className="navbar">
   <h2 className="logo">Blog App</h2>
 
   <div className="nav-buttons">
+       
+    <button onClick={() => setDarkMode(!darkMode)}>
+      {darkMode ? "Light Mode ☀️" : "Dark Mode 🌙"}
+    </button>
+  
 
     {/* Show Login/Register only if NOT logged in AND not on login/register page */}
     {!token &&
