@@ -69,7 +69,8 @@ async function loginUser(req, res) {
     // store in cookie
     res.cookie("token", token, {
       httpOnly: true,
-      secure: false   // true in production
+      secure: true,  // true in production
+      sameSite: "None"
     });
 
     res.status(200).json({

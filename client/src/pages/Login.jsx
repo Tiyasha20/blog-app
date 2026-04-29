@@ -8,7 +8,9 @@ export default function Login() {
 
   const handleLogin = async () => {
     try {
-      await axios.post("/auth/login", form);
+      await axios.post("/auth/login", form, {
+      withCredentials: true   // 🔥 VERY IMPORTANT
+     });
       alert("Login successful");
       navigate("/dashboard");
     } catch (err) {
