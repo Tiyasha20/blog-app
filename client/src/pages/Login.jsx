@@ -12,7 +12,7 @@ export default function Login() {
       withCredentials: true   // 🔥 VERY IMPORTANT
      });
       alert("Login successful");
-      navigate("/dashboard");
+      window.location.href = "/dashboard"; 
     } catch (err) {
         console.log(err.response);  
       alert("Login failed");
