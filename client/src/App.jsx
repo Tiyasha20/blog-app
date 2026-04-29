@@ -85,8 +85,9 @@ function App() {
     path="/dashboard" 
     element={token ? <Dashboard /> : <Navigate to="/login" />} 
   />
+     <Route path="*" element={<Navigate to="/" />} />  
         </Routes>
-    <Route path="*" element={<Navigate to="/" />} />   
+     
 
     </div>
     
