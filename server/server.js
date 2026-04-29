@@ -14,7 +14,9 @@ connectDB();
 // middlewares
 app.use(express.json());   // ✅ FIRST
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: ["http://localhost:5173",
+           "https://blog-app-brown-tau-16.vercel.app"
+  ],
   credentials: true
 }));
 app.use(cookieParser());
