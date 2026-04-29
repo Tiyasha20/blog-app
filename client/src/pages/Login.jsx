@@ -11,6 +11,7 @@ export default function Login() {
       await axios.post("/auth/login", form, {
       withCredentials: true   // 🔥 VERY IMPORTANT
      });
+      localStorage.setItem("token", "true"); 
       alert("Login successful");
       window.location.href = "/dashboard"; 
     } catch (err) {
