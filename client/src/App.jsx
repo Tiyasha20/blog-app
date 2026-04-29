@@ -66,10 +66,7 @@ function App() {
       
         <Routes>
           {/* Home protected */}
-  <Route 
-    path="/" 
-    element={token ? <Home /> : <Navigate to="/login" />} 
-  />
+   <Route path="/" element={<Home />} />
 
   {/* Login blocked if already logged in */}
   <Route 
@@ -89,7 +86,7 @@ function App() {
     element={token ? <Dashboard /> : <Navigate to="/login" />} 
   />
         </Routes>
-      
+    <Route path="*" element={<Navigate to="/" />} />   
 
     </div>
     
